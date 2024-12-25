@@ -1,5 +1,4 @@
 import React from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -18,7 +17,6 @@ function App() {
             <Route path="/object-detection" element={<ObjectDetection />} />
             <Route path="/face-detection" element={<FaceDetection />} />
             <Route path="/image-classification" element={<ImageClassification />} />
-            <SpeedInsights/>
           </Routes>
         </main>
       </div>
