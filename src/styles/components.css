@@ -1,0 +1,31 @@
+@layer components {
+  .camera-container {
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800;
+  }
+
+  .camera-overlay {
+    @apply absolute inset-0 flex items-center justify-center bg-black/50 transition-opacity duration-300;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium
+           transition-colors focus-visible:outline-none focus-visible:ring-2 
+           focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none 
+           disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] 
+           hover:bg-[hsl(var(--primary))]/90;
+  }
+
+  .btn-destructive {
+    @apply bg-[hsl(var(--destructive))] text-[hsl(var(--destructive-foreground))] 
+           hover:bg-[hsl(var(--destructive))]/90;
+  }
+
+  .btn-outline {
+    @apply border border-[hsl(var(--input))] bg-[hsl(var(--background))] 
+           hover:bg-[hsl(var(--accent))] hover:text-[hsl(var(--accent-foreground))];
+  }
+}

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 5% 64.9%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --ring: 240 3.7% 15.9%;
+  }
+}
+
+.camera-container {
+  @apply relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800;
+}
+
+.camera-overlay {
+  @apply absolute inset-0 flex items-center justify-center bg-black/50 transition-opacity;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-colors
+         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none;
+}
+
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+}
+
+.btn-destructive {
+  @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+}
+
+.btn-outline {
+  @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground;
+}
+
+.pulse {
+  @apply animate-pulse;
+}
+
+.fade-in {
+  @apply animate-in fade-in duration-300;
+}
+
+.slide-in {
+  @apply animate-in slide-in-from-bottom duration-300;
+}
